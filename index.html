@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- set the character set -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- first step to a responsive site -->
+    <title>HTML Skeleton</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Your styles should be called here -->
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      	<![endif]-->
+</head>
+
+<body>
+    <!-- YOUR CONTENT GOES HERE -->
+    
+    <h1 class="title">Top 10 World's <span class="underline">Endangered</span> Animals</h1>
+
+    
+    
+    <div class="button_container">
+        <input type="button" id="Terrestrial" value="Terrestrial">
+        <input type="button" id="Marine" value="Marine">
+    </div>
+
+    <div class="container">
+
+    <div class="box Marine">
+        <div class="square2">10</div>
+        <h2>Hawksbill Turtles</h2>
+        <img src ="images/hawksbillTurtle.png">
+        <div class="line"hr></div>
+        <h4>Atlantic, the Indian, and the Pacific Ocean</h4> 
+        <p>Reason: Accidental capture in fishing gears, nesting habitat degradation,
+        coral reef damage and the illegal trade of hawksbill shells and products. </p>
+    </div>
+
+    <div class="box Terrestrial">
+        <div class="square">9</div>
+        <h2>Sumatran Orangutan</h2>
+        <img src="images/orangutan.jpg">
+        <div class="line"hr></div>
+        <h4><i class='fas fa-map-pin'></i>Sumatra, Indonesia</h4>
+        <p>Reason: Loss of forest habitat.</p>
+    </div>
+
+    <div class="box Terrestrial">
+        <div class="square">8</div>
+        <h2>African Forest Elephant</h2>
+        <img src="images/elephant.jpg">
+        <div class="line"hr></div>
+        <h4>West and Central Africa</h4>
+        <p>Reason: Poaching, habitat loss due to land-use for agriculture. </p>
+    </div>
+
+    <div class="box Terrestrial">
+        <div class="square">7</div>
+        <h2>Black Rhinos</h2>
+        <img src="images/rhino.jpg">
+        <div class="line"hr></div>
+        <h4>Kenya, Namibia, South Africa and Zimbabwe</h4>
+        <p>Reason: Poaching for their horn.</p>
+    </div>
+
+    <div class="box Marine">
+        <div class="square2">6</div>
+        <h2>Yangtze Finless Porpoise</h2>
+        <img src="images/porpoise.jpg">
+        <div class="line"hr></div>
+        <h4>Yangtze River, China</h4>
+        <p>Reason: Environmental degradation, overfishing and water pollution.</p>
+    </div>
+    
+    <div class="box Terrestrial">
+        <div class="square">5</div>
+        <h2>Tapanuli Orangutan</h2>
+        <img src="images/tapanuli.jpg">
+        <div class="line"hr></div>
+        <h4>Sumatra, Indonesia</h4>
+        <p>Reason: Loss of habitat due to agriculture, mining, and hydroelectric
+            and geothermal development </p>
+    </div>
+
+    <div class="box Terrestrial">
+        <div class="square">4</div>
+        <h2>Mountain Gorillas</h2>
+        <img src="images/mountainGorilla.jpg">
+        <div class="line"hr></div>
+        <h4>Democratic Republic of Congo, Rwanda and Uganda</h4>
+        <p>Reason: Loss of habitat due to the expansion of human settlement.</p>
+    </div>
+
+    <div class="box Terrestrial">
+        <div class="square">3</div>
+        <h2>Sunda Island Tiger</h2>
+        <img src="images/islandTiger.jpg">
+        <div class="line"hr></div>
+        <h4>Sumatra, Indonesia</h4>
+        <p>Reason: Loss of habitat due to the expansion of human settlemennt and poaching.</p>
+    </div>
+
+    <div class="box Terrestrial">
+        <div class="square">2</div>
+        <h2>Amur Leopard</h2>
+        <img src="images/amurLeopard.jpg">
+        <div class="line"hr></div>
+        <h4>Russia and Nort-Eastern China</h4>
+        <p>Reason: Loss and fragmentation of habitat, prey scarcity and transportation infrastructure such 
+            as roads.</p>
+    </div>
+
+    <div class="box Terrestrial">
+        <div class="square">1</div>
+        <h2>Javan Rhinos</h2>
+        <img src="images/javanRhinos.jpg">
+        <div class="line"hr></div>
+        <h4>Java, Indonesia</h4>
+        <p>Reason: Hunting, loss of habitat, invading plant species that leave them with less food. Also, they are
+            extramely vulnerable to extinction due to natural catastrophes, disease, poaching and potential inbreeding.</p>
+    </div>
+
+ </div>
+
+
+    <!-- Your javascript should be called here -->
+<script>
+    let Terrestrial_animal = document.getElementsById('Terrestrial');
+    let Terrestrial = document.getElementsbyClassName('Terrestrial');
+
+    let Marine_animal = document.getElementsByClassId('Marine');
+    let Marine = document.getElementsByClassName('Marine');
+
+    Terrestrial_animal.onclick = function(){
+        for (let i=0; i < Terrestrial.length; i++){
+            Terrestrial[i].classList.add('border_class');
+        }
+        for (let i=0; i < Marine.length; i++){
+            Marine[i].classList.remove('border_class');
+        }
+    }
+
+    Marine_animal.onclick = function(){
+        for (let i=0; i< Marine.length; i++){
+            Marine[i].classList.add('border_class');
+        }
+        for (let i=0; i< Terrestrial.length; i++){
+            Terrestrial[i].classList.remove('border_class');
+        }
+    }
+</script>
+
+</body>
+
+</html>
